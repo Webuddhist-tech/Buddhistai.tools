@@ -14,17 +14,17 @@ const visionPosts: Array<{
 }> = [
   {
     title: "Our Mission",
-    author: "Tenzin Tsering",
+    author: "Sandup",
     role: "Software Engineer",
-    avatar: "https://dharmaduta.in/team/pecha_server/tentse.png",
+    avatar: "https://dharmaduta.in/team/webuddhist/sandup.jpg",
     description:
       "Our mission is to preserve and make accessible the profound wisdom of Buddhist teachings through innovative digital technologies. We're ensuring ancient knowledge remains relevant for future generations.",
   },
   {
     title: "Our Values",
-    author: "Karma Tsering",
+    author: "Lungsang",
     role: "Software Engineer",
-    avatar: "https://dharmaduta.in/team/pecha_studio/kartse.jpg",
+    avatar: "https://dharmaduta.in/team/webuddhist/lungsang.jpg",
     description:
       "We are guided by compassion, mindfulness, and the pursuit of wisdom. Every tool we create is designed with respect for the sacred nature of these texts and their transformative power.",
   },
