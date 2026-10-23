@@ -54,19 +54,19 @@ interface ToolViewerProps {
 function ToolViewer({ toolName, toolUrl }: ToolViewerProps) {
     'use client';
     return (
-        <div className="flex flex-col h-screen bg-neutral-50 dark:bg-neutral-900">
-            <header className="flex items-center justify-between p-2 bg-white dark:bg-neutral-800 border-b border-neutral-200 dark:border-neutral-700">
+        <div className="flex flex-col h-screen bg-[var(--page-bg)]">
+            <header className="flex items-center justify-between p-2 bg-[var(--surface)]/80 backdrop-blur-xl border-b border-[var(--border)]">
                 <div className="flex items-center gap-4">
-                <Link href="/" className="p-2 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-700">
-                    <ArrowLeft className="w-6 h-6 text-neutral-600 dark:text-neutral-300" />
+                <Link href="/" className="p-2 rounded-full hover:bg-[var(--primary)]/10">
+                    <ArrowLeft className="w-6 h-6 text-[var(--muted-foreground)]" />
                 </Link>
-                <h1 className="text-xl font-semibold text-neutral-800 dark:text-neutral-200">{toolName}</h1>
+                <h1 className="text-xl font-semibold text-[var(--foreground)]">{toolName}</h1>
                 </div>
             </header>
             <div className="flex-1">
             {!toolUrl ? (
-    <div className="flex flex-col items-center justify-center h-screen bg-neutral-100 dark:bg-neutral-900">
-      <h1 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200">Tool not found</h1>
+    <div className="flex flex-col items-center justify-center h-screen bg-[var(--page-bg)]">
+      <h1 className="text-2xl font-bold text-[var(--foreground)]">Tool not found</h1>
       <div>contact admin to get access</div>
     </div>):(
                 <iframe
@@ -96,8 +96,8 @@ export default async function ToolPage({ params }: PageProps) {
   if (!user) {
     // Or handle redirection to login
     return (
-        <div className="flex flex-col items-center justify-center h-screen bg-neutral-100 dark:bg-neutral-900">
-            <h1 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200">Please log in to access this tool</h1>
+        <div className="flex flex-col items-center justify-center h-screen bg-[var(--page-bg)]">
+            <h1 className="text-2xl font-bold text-[var(--foreground)]">Please log in to access this tool</h1>
             <Link href="/api/auth/login" className="mt-4 text-primary-600 hover:underline">
                 Login
             </Link>

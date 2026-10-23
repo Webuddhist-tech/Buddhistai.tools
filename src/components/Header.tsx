@@ -34,7 +34,7 @@ const Header: React.FC = () => {
   }, []);
   
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 py-3 px-4 bg-[var(--surface)]/70 dark:bg-[var(--surface)]/80 backdrop-blur-xl border-b border-[var(--border)]">
+    <header className="fixed top-0 left-0 right-0 z-50 py-3 px-4 bg-[var(--surface)]/70 dark:bg-[var(--surface)]/75 backdrop-blur-xl border-b border-[var(--border)]/70 shadow-[0_1px_0_0_rgba(59,163,230,0.06)]">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         <Link href="/" className="flex items-center gap-3 group">
           <img
@@ -42,10 +42,10 @@ const Header: React.FC = () => {
             alt="Pecha Tools Logo"
             width={36}
             height={36}
-            className="rounded-lg object-contain"
+            className="rounded-full object-contain ring-1 ring-[var(--primary)]/30 group-hover:ring-[var(--primary)]/60 transition"
           />
           <span className="text-xl font-semibold tracking-tight text-[var(--foreground)] group-hover:opacity-90 transition-opacity">
-            WeBuddhist AI Studio
+            Buddhist AI Studio
           </span>
         </Link>
         {/* Desktop Navigation */}
@@ -53,13 +53,13 @@ const Header: React.FC = () => {
           <nav className="flex items-center gap-1" aria-label="Main">
             <a
               href="#tools"
-              className="px-3 py-2 text-sm font-medium text-[var(--muted-foreground)] hover:text-[var(--foreground)] rounded-lg hover:bg-[var(--accent)] transition-colors"
+              className="px-3 py-2 text-sm font-medium text-[var(--muted-foreground)] hover:text-[var(--primary)] rounded-lg hover:bg-[var(--primary)]/10 transition-colors"
             >
               Tools
             </a>
             <a
               href="#vision"
-              className="px-3 py-2 text-sm font-medium text-[var(--muted-foreground)] hover:text-[var(--foreground)] rounded-lg hover:bg-[var(--accent)] transition-colors"
+              className="px-3 py-2 text-sm font-medium text-[var(--muted-foreground)] hover:text-[var(--primary)] rounded-lg hover:bg-[var(--primary)]/10 transition-colors"
             >
               Vision
             </a>
@@ -89,7 +89,7 @@ const Header: React.FC = () => {
               >
                 <Avatar title={user?.name || undefined}>
                   <AvatarImage src={user?.picture || undefined} />
-                  <AvatarFallback className="bg-[var(--primary)] text-[var(--primary-foreground)]">{user?.name?.charAt(0) || "U"}</AvatarFallback>
+                  <AvatarFallback className="bg-brand-gradient text-white">{user?.name?.charAt(0) || "U"}</AvatarFallback>
                 </Avatar>
                 <div className="flex flex-col min-w-0">
                   <span className="text-sm font-medium text-[var(--foreground)] truncate">{user?.name ?? "Profile"}</span>
@@ -97,7 +97,7 @@ const Header: React.FC = () => {
                 </div>
               </button>
               {showDropdown && (
-                <div className="absolute right-0 top-full mt-2 w-52 py-1.5 rounded-xl bg-[var(--popover)] border border-[var(--border)] shadow-lg z-50">
+                <div className="absolute right-0 top-full mt-2 w-52 py-1.5 rounded-xl bg-[var(--popover)]/95 backdrop-blur-xl border border-[var(--border)] shadow-xl shadow-black/30 z-50">
                   <Link
                     href="/profile"
                     className="block px-4 py-2.5 text-sm text-[var(--foreground)] hover:bg-[var(--accent)] transition-colors"
@@ -120,7 +120,7 @@ const Header: React.FC = () => {
           ) : (
             <a
               href="/auth/login"
-              className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-xl bg-[var(--primary)] text-[var(--primary-foreground)] hover:opacity-90 transition-opacity"
+              className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-xl bg-brand-gradient text-white shadow-brand-glow hover:brightness-110 transition"
             >
               Sign in
             </a>
@@ -148,7 +148,7 @@ const Header: React.FC = () => {
                 <div className="flex items-center gap-3 pb-4 border-b border-[var(--border)]">
                   <Avatar title={user?.name || undefined}>
                     <AvatarImage src={user?.picture || undefined} />
-                    <AvatarFallback className="bg-[var(--primary)] text-[var(--primary-foreground)]">{user?.name?.charAt(0) || "U"}</AvatarFallback>
+                    <AvatarFallback className="bg-brand-gradient text-white">{user?.name?.charAt(0) || "U"}</AvatarFallback>
                   </Avatar>
                   <div className="flex flex-col">
                     <span className="font-medium text-[var(--foreground)]">{user?.name ?? "Profile"}</span>
@@ -173,7 +173,7 @@ const Header: React.FC = () => {
                   <a href="#tools" className="block px-3 py-2.5 text-sm font-medium text-[var(--foreground)] hover:bg-[var(--accent)] rounded-lg transition-colors" onClick={() => setShowMobileMenu(false)}>Tools</a>
                   <a href="#vision" className="block px-3 py-2.5 text-sm font-medium text-[var(--foreground)] hover:bg-[var(--accent)] rounded-lg transition-colors" onClick={() => setShowMobileMenu(false)}>Vision</a>
                 </nav>
-                <a href="/auth/login" className="block w-full py-3 text-center text-sm font-medium rounded-xl bg-[var(--primary)] text-[var(--primary-foreground)] hover:opacity-90 transition-opacity">Sign in</a>
+                <a href="/auth/login" className="block w-full py-3 text-center text-sm font-medium rounded-xl bg-brand-gradient text-white shadow-brand-glow hover:brightness-110 transition">Sign in</a>
               </div>
             )}
           </div>

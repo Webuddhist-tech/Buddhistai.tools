@@ -34,7 +34,7 @@ export const TestimonialsColumn = (props: {
             <React.Fragment key={`batch-${batchIndex}`}>
               {props.testimonials.map(({ text, image, name, role }) => (
                 <div
-                  className="p-10 rounded-3xl border border-[var(--border)] shadow-lg shadow-[var(--primary)]/10 max-w-xs w-full bg-[var(--card)] text-[var(--foreground)]"
+                  className="p-10 rounded-3xl border border-[var(--border)] shadow-lg shadow-[var(--primary)]/10 max-w-xs w-full bg-gradient-to-b from-[var(--card)] to-[var(--surface)] hover:border-[var(--primary)]/40 transition-colors text-[var(--foreground)]"
                   key={`${name}-${batchIndex}`}
                 >
                   <div className="text-[var(--foreground)]">{text}</div>
@@ -44,7 +44,7 @@ export const TestimonialsColumn = (props: {
                       height={40}
                       src={image}
                       alt={name}
-                      className="h-10 w-10 rounded-full object-cover"
+                      className="h-10 w-10 rounded-full object-cover ring-2 ring-[var(--primary)]/30"
                     />
                     <div className="flex flex-col">
                       <div className="font-medium tracking-tight leading-5 text-[var(--foreground)]">

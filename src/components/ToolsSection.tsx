@@ -52,22 +52,24 @@ function ToolCard({ title, description, icon, path, loginRequired, status, index
   const content = (
     <>
       {index < 4 && (
-        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-[var(--muted)]/50 to-transparent pointer-events-none" />
+        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-[var(--primary)]/10 to-transparent pointer-events-none" />
       )}
       {index >= 4 && (
-        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-[var(--muted)]/50 to-transparent pointer-events-none" />
+        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-[var(--primary)]/10 to-transparent pointer-events-none" />
       )}
       {badge && (
-        <span className="absolute top-4 right-4 z-20 rounded-full bg-[var(--muted)] px-2.5 py-1 text-xs font-medium text-[var(--muted-foreground)]">
+        <span className="absolute top-4 right-4 z-20 rounded-full bg-[var(--primary)]/10 px-2.5 py-1 text-xs font-medium text-[var(--primary)] ring-1 ring-[var(--primary)]/20">
           {badge}
         </span>
       )}
       <div className="mb-4 relative z-10 px-10 text-[var(--muted-foreground)]">
-        {icon ? (
-          <Image src={icon} alt="" width={32} height={32} className="h-8 w-8 object-contain text-[var(--primary)]" />
-        ) : (
-          <Sparkles className="h-8 w-8 text-[var(--primary)]" />
-        )}
+        <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--primary)]/10 ring-1 ring-[var(--primary)]/20 group-hover/feature:bg-[var(--primary)]/15 group-hover/feature:ring-[var(--primary)]/40 transition">
+          {icon ? (
+            <Image src={icon} alt="" width={32} height={32} className="h-7 w-7 object-contain text-[var(--primary)]" />
+          ) : (
+            <Sparkles className="h-6 w-6 text-[var(--primary)]" />
+          )}
+        </div>
       </div>
       <div className="text-lg font-bold mb-2 relative z-10 px-10">
         <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-[var(--muted)] group-hover/feature:bg-[var(--primary)] transition-all duration-200 origin-center" />
@@ -84,7 +86,7 @@ function ToolCard({ title, description, icon, path, loginRequired, status, index
             {cta}
           </Button>
         ) : loginRequired && !isAuthenticated ? (
-          <span className="relative inline-flex items-center gap-2 text-sm font-medium">
+          <span className="relative inline-flex items-center gap-2 text-sm font-medium text-[var(--primary)]">
             <span className="inline-flex items-center gap-2 opacity-100 group-hover/feature:opacity-0 transition-opacity duration-200">
               Access Tool
               <ArrowRight className="h-4 w-4" />
@@ -95,7 +97,7 @@ function ToolCard({ title, description, icon, path, loginRequired, status, index
             </span>
           </span>
         ) : (
-          <span className="inline-flex items-center gap-2 text-sm font-medium hover:underline">
+          <span className="inline-flex items-center gap-2 text-sm font-medium text-[var(--primary)] hover:underline">
             {cta}
             <ArrowRight className="h-4 w-4" />
           </span>
@@ -137,7 +139,7 @@ const ToolsSection: React.FC<ToolsSectionProps> = ({ tools, oldTools }) => {
     >
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <header className="text-center mb-14 md:mb-18">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--card)]/50 px-4 py-2 text-sm font-medium text-[var(--muted-foreground)] mb-6">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[var(--primary)]/25 bg-[var(--primary)]/10 px-4 py-2 text-sm font-medium text-[var(--foreground)] mb-6">
             <Sparkles className="h-4 w-4 text-[var(--primary)]" />
             Our AI Tools
           </div>
@@ -178,7 +180,7 @@ const ToolsSection: React.FC<ToolsSectionProps> = ({ tools, oldTools }) => {
               <h2 className="text-2xl font-bold tracking-tight sm:text-3xl text-[var(--foreground)]">
                 Training Data Tools
               </h2>
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-[var(--muted)] text-[var(--muted-foreground)] text-xs font-medium border border-[var(--border)]">
+              <span className="inline-flex items-center px-3 py-1 rounded-full bg-[var(--primary)]/10 text-[var(--primary)] text-xs font-medium border border-[var(--primary)]/25">
                 For annotators only
               </span>
             </div>
@@ -203,7 +205,7 @@ const ToolsSection: React.FC<ToolsSectionProps> = ({ tools, oldTools }) => {
         {(!tools || tools.length === 0) && (!oldTools || oldTools.length === 0) && (
           <div className="text-center py-20">
             <div className="rounded-2xl border border-[var(--border)] bg-[var(--card)]/80 backdrop-blur-sm p-12 max-w-md mx-auto shadow-sm">
-              <div className="w-14 h-14 rounded-xl bg-[var(--muted)] flex items-center justify-center mx-auto mb-5 text-[var(--primary)]">
+              <div className="w-14 h-14 rounded-xl bg-[var(--primary)]/10 ring-1 ring-[var(--primary)]/20 flex items-center justify-center mx-auto mb-5 text-[var(--primary)]">
                 <Sparkles className="h-7 w-7" />
               </div>
               <h3 className="text-xl font-semibold text-[var(--foreground)] mb-2">Coming Soon</h3>

@@ -78,7 +78,7 @@ const VisionSection = () => {
       aria-labelledby="vision-heading"
     >
       <div
-        className="absolute top-0 right-0 w-80 h-80 rounded-full blur-3xl bg-[var(--primary)]/10 pointer-events-none"
+        className="absolute top-0 right-0 w-80 h-80 rounded-full blur-3xl bg-[var(--primary)]/15 pointer-events-none"
         aria-hidden
       />
       <div
@@ -94,7 +94,7 @@ const VisionSection = () => {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center max-w-[540px] mx-auto mb-12 md:mb-14"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--card)]/50 px-4 py-2 text-sm font-medium text-[var(--muted-foreground)] mb-5">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[var(--primary)]/25 bg-[var(--primary)]/10 px-4 py-2 text-sm font-medium text-[var(--foreground)] mb-5">
             <MessageCircle className="h-4 w-4 text-[var(--primary)]" />
             Community Voices
           </div>

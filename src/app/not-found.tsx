@@ -12,7 +12,7 @@ const NotFoundPage = () => {
       </p>
       <Link
         href="/"
-        className="inline-flex items-center px-4 py-2.5 text-sm font-medium rounded-xl bg-[var(--primary)] text-[var(--primary-foreground)] hover:opacity-90 transition-opacity"
+        className="inline-flex items-center px-4 py-2.5 text-sm font-medium rounded-xl bg-brand-gradient text-white shadow-brand-glow hover:brightness-110 transition"
       >
         Back to home
       </Link>

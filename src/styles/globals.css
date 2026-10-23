@@ -102,7 +102,7 @@ body {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* Gradient Light Blob - Warm, contemplative glow behind hero */
+/* Gradient Light Blob - Calm blue glow behind hero */
 .gradient-light-blob {
   position: absolute;
   top: 50%;
@@ -113,9 +113,9 @@ body {
   z-index: 1;
   background: radial-gradient(
     ellipse 75% 55% at center,
-    rgba(217, 119, 6, 0.18) 0%,
-    rgba(180, 83, 9, 0.12) 25%,
-    rgba(20, 184, 166, 0.08) 50%,
+    rgba(26, 131, 189, 0.18) 0%,
+    rgba(0, 84, 137, 0.12) 25%,
+    rgba(34, 184, 214, 0.08) 50%,
     transparent 75%
   );
   filter: blur(60px);
@@ -123,6 +123,35 @@ body {
   animation: light-glow 10s ease-in-out infinite;
 }
 
+
+/* Brand utilities (blue theme) */
+.text-gradient-brand {
+  background: linear-gradient(90deg, #7fc0e3 0%, var(--primary) 45%, #22b8d6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-brand-gradient {
+  background-image: var(--brand-gradient);
+}
+
+.shadow-brand-glow {
+  box-shadow: 0 8px 24px -8px var(--brand-glow), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(to right, rgba(59, 163, 230, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(59, 163, 230, 0.07) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, black 30%, transparent 75%);
+}
+
+::selection {
+  background: rgba(59, 163, 230, 0.35);
+}
 
 .desc_style{
   color:#888;

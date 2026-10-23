@@ -48,7 +48,7 @@ const TypewriterText = () => {
 
   return (
     <span className="block text-xl sm:text-2xl lg:text-3xl font-semibold text-[var(--primary)]">
-      #{currentText}
+      <span className="text-gradient-brand">#{currentText}</span>
       <span className="animate-pulse text-[var(--primary)]">|</span>
     </span>
   );

@@ -74,12 +74,14 @@ export default async function Home() {
   return (
     <Layout>
       <div className="min-h-screen w-full bg-[var(--page-bg)] relative">
+        <div className="absolute inset-x-0 top-0 h-[60rem] z-0 pointer-events-none bg-grid-pattern" aria-hidden />
         <div
           className="absolute inset-0 z-0 pointer-events-none"
           aria-hidden
           style={{
             backgroundImage: `
-              radial-gradient(ellipse 80% 50% at 50% 0%, rgba(217,119,6,0.06) 0%, transparent 55%),
+              radial-gradient(ellipse 70% 45% at 50% 0%, rgba(26,131,189,0.22) 0%, transparent 60%),
+              radial-gradient(ellipse 40% 30% at 85% 15%, rgba(34,184,214,0.08) 0%, transparent 70%),
               linear-gradient(to bottom, transparent 0%, var(--page-bg) 100%)
             `,
           }}

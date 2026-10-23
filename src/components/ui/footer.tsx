@@ -29,10 +29,14 @@ interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {
   socialLinks: SocialLink[];
   columns: FooterColumn[];
   copyright?: string;
+  poweredBy?: {
+    name: string;
+    href: string;
+  };
 }
 
 export const Footer = React.forwardRef<HTMLDivElement, FooterProps>(
-  ({ className, brand, socialLinks, columns, copyright, ...props }, ref) => {
+  ({ className, brand, socialLinks, columns, copyright, poweredBy, ...props }, ref) => {
     return (
       <div
         ref={ref}
@@ -95,9 +99,24 @@ export const Footer = React.forwardRef<HTMLDivElement, FooterProps>(
             </div>
           </div>
 
-          {copyright && (
-            <div className="mt-20 border-t border-border pt-6 pb-8">
-              <p className="text-xs text-muted-foreground">{copyright}</p>
+          {(copyright || poweredBy) && (
+            <div className="mt-20 border-t border-border pt-6 pb-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              {copyright && (
+                <p className="text-xs text-muted-foreground">{copyright}</p>
+              )}
+              {poweredBy && (
+                <p className="text-xs text-muted-foreground">
+                  Powered by{" "}
+                  <a
+                    href={poweredBy.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-primary hover:underline"
+                  >
+                    {poweredBy.name}
+                  </a>
+                </p>
+              )}
             </div>
           )}
         </div>

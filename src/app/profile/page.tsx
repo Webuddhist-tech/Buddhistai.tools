@@ -15,7 +15,7 @@ export default function ProfilePage() {
 
   return (
     <div className="container mx-auto px-4 py-12 max-w-2xl">
-      <div className="bg-white dark:bg-neutral-800 rounded-xl shadow-md p-8 flex flex-col items-center">
+      <div className="bg-[var(--card)] border border-[var(--border)] rounded-2xl shadow-lg shadow-[var(--primary)]/10 p-8 flex flex-col items-center">
         <Image
           width={96}
           height={96}
@@ -24,12 +24,12 @@ export default function ProfilePage() {
           className="w-24 h-24 rounded-full border-4 border-primary-300 mb-4 object-cover"
         />
         <h1 className="text-2xl font-bold mb-1">{user.name ?? "Anonymous"}</h1>
-        <p className="mb-6 text-neutral-600 dark:text-neutral-400">
+        <p className="mb-6 text-[var(--muted-foreground)]">
           {user.email}
         </p>
         <a
           href="/api/auth/logout"
-          className="inline-block px-4 py-2 text-sm rounded-full bg-primary-600 text-white hover:bg-primary-700 transition"
+          className="inline-block px-4 py-2 text-sm rounded-full bg-brand-gradient text-white shadow-brand-glow hover:brightness-110 transition"
         >
           Log Out
         </a>

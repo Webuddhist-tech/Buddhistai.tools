@@ -22,6 +22,7 @@ export interface SEOMetadata {
 
 // Core keywords for the Buddhist AI platform
 export const CORE_KEYWORDS = [
+  "buddhist ai studio",
   "webuddhist",
   "we buddhist",
   "webuddhist ai",
@@ -58,7 +59,7 @@ export const CORE_KEYWORDS = [
 
 // Base site information
 export const SITE_INFO = {
-  name: 'WeBuddhist AI Studio',
+  name: 'Buddhist AI Studio',
   url: 'https://studio.pecha.ai',
   description: 'A comprehensive collection of AI tools for modern Buddhist text collection, translation, and preservation. Specialized platform for Pecha Tibetan manuscripts, ancient Buddhist scriptures, and Dharma text processing.',
   logo: '/icon_logo.png',
@@ -100,8 +101,8 @@ export const DEFAULT_SEO_METADATA: SEOMetadata = {
     },
     "creator": {
       "@type": "Organization",
-      "name": "Buddhist AI Studio",
-      "url": SITE_INFO.url
+      "name": "WeBuddhist",
+      "url": "https://webuddhist.com"
     },
     "about": [
       {

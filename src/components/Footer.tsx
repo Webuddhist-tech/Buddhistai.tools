@@ -25,14 +25,14 @@ const Footer = ({ className = "" }: FooterProps) => {
       <FooterUI
         className="pt-8"
         brand={{
-          name: "WeBuddhist AI Studio",
+          name: "Buddhist AI Studio",
           description:
             "Preserving and sharing the wisdom of Buddhist teachings through AI-powered digital tools.",
           href: "/",
         }}
         socialLinks={[
           { name: "Forum", href: "https://forum.openpecha.org" },
-          { name: "OpenPecha", href: "https://openpecha.org" },
+          { name: "WeBuddhist", href: "https://webuddhist.com" },
         ]}
         columns={[
           {
@@ -75,7 +75,8 @@ const Footer = ({ className = "" }: FooterProps) => {
             ],
           },
         ]}
-        copyright="© 2025 WeBuddhist AI Studio. Some tools use AI to enhance manuscript processing and analysis."
+        poweredBy={{ name: "WeBuddhist", href: "https://webuddhist.com" }}
+        copyright="© 2025 Buddhist AI Studio. Some tools use AI to enhance manuscript processing and analysis."
       />
     </footer>
   );
