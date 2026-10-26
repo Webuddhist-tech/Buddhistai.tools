@@ -73,7 +73,7 @@ function ToolViewer({ toolName, toolUrl }: ToolViewerProps) {
                 src={toolUrl}
                 className="w-full h-full border-0"
                 title={toolName}
-                sandbox="allow-scripts allow-same-origin allow-forms"
+                sandbox="allow-scripts allow-same-origin allow-forms allow-downloads allow-modals"
                 />
             )}
             </div>
